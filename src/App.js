@@ -1,5 +1,5 @@
-import AddCardForm from './components/AddCardForm/AddCardForm'
-import NoteList from './components/NoteList/NoteList'
+import AddCardForm from './components/AddCardForm'
+import NoteList from './components/NoteList'
 import './App.css'
 
 function App() {
