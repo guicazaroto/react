@@ -1,13 +1,14 @@
 import React from 'react'
-import NoteCard from './NoteCard'
+import NoteCard from '../NoteCard/NoteCard'
+import './NoteList.css'
 
 class NoteList extends React.Component {
   render() {
     return (
-      <ul>
+      <ul className="note-list">
         {['estudo', 'trabalho', 'lazer'].map((item, index) => {
             return(
-              <li>
+              <li className="note-item" key={index}>
                 <h2>{item}</h2>
                 <NoteCard />
               </li>

@@ -1,0 +1,21 @@
+.note-form {
+  background: #ddd;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.note-form input, .note-form textarea {
+  box-sizing: border-box;
+  padding: 0.5rem;
+  margin: 1rem 0;
+  width: 100%;
+}
+
+.note-form button {
+  background: #13afa7;
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 0.5rem 1.5rem;
+  border: none;
+  cursor: pointer;
+}
