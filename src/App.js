@@ -6,19 +6,22 @@ import './App.css'
 class App extends React.Component {
   constructor () {
     super()
-    this.notes = []
+    this.state = {
+      notes: []
+    }
   }
 
   createNote (title, body) {
-    this.notes.push({ title, body })
-    this.setState(this.notes)
+    const newNote = { title, body }
+    const noteState = [ ...this.state.notes, newNote ]
+    this.setState({ notes: noteState })
   }
 
   render() {
     return (
       <div className="App container">
         <AddCardForm createNote={this.createNote.bind(this)} />
-        <NoteList notes={this.notes}/>
+        <NoteList notes={this.state.notes}/>
       </div>
     );
   }
