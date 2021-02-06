@@ -5,8 +5,7 @@ class NoteCard extends React.Component {
     return(
       <section>
         <header>
-          <h3>Nota 1</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea quibusdam ratione neque culpa tempore minima enim harum suscipit velit sint necessitatibus iure quasi expedita, numquam fuga fugit corrupti, doloribus voluptate.</p>
+          <p>{this.props.noteBody}</p>
         </header>
       </section>
     )

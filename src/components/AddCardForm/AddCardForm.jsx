@@ -1,4 +1,4 @@
-import React from "react"
+import React from 'react'
 import './AddCardForm.css'
 
 class AddCardForm extends React.Component {
@@ -8,30 +8,29 @@ class AddCardForm extends React.Component {
     this.title = '';
   }
 
-  handleChangeTitle (event) {
+  _handleChangeTitle (event) {
     this.title = event.target.value
   }
 
-  handleChangeBody (event) {
+  _handleChangeBody (event) {
     this.body = event.target.value
   }
 
-  handleCard (event) {
+  _createNote (event) {
     event.preventDefault()
-    console.log(this.title)
-    console.log(this.body)
+    this.props.createNote(this.title, this.body)
   }
 
   render() {
     return (
-      <form className="note-form" onSubmit={this.handleCard.bind(this)}>
+      <form className="note-form" onSubmit={this._createNote.bind(this)}>
         <input
-          onChange={this.handleChangeTitle.bind(this)}
+          onChange={this._handleChangeTitle.bind(this)}
           type="text"
           placeholder="Título"
         />
         <textarea
-          onChange={this.handleChangeBody.bind(this)}
+          onChange={this._handleChangeBody.bind(this)}
           cols="30"
           rows="10"
           placeholder="Descrição"
